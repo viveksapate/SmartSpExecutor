@@ -12,6 +12,7 @@ Step 3 : Here you go
 
 Available Methods :
 
+
 ///`<summary>`
 
     /// Method executes the stored procedure and returns a rows modified count
@@ -105,3 +106,37 @@ Available Methods :
     ///`<returns></returns>`
 
     Task`<T>` ExecuteSpReturnTypeAsync `<T>`(stringstoredProcName, Dictionary<string, SqlParameter> procParameters, CancellationTokencancellationToken=default) whereT : class, new();
+
+    ///`<summary>`
+
+    /// Method executes the stored procedure and returns a same list type
+
+    ///`</summary>`
+
+    ///<typeparamname="T">`</typeparam>`
+
+    ///<paramname="storedProcName">`</param>`
+
+    ///<paramname="cancellationToken">`</param>`
+
+    ///`<returns></returns>`
+
+    Task<List`<T>`> ExecuteSpReturnListTypeAsync `<T>`(stringstoredProcName, CancellationTokencancellationToken=default) whereT : class, new();
+
+    ///`<summary>`
+
+    /// Method executes the stored procedure and returns a same list type
+
+    ///`</summary>`
+
+    ///<typeparamname="T">`</typeparam>`
+
+    ///<paramname="storedProcName">`</param>`
+
+    ///<paramname="procParameters">`</param>`
+
+    ///<paramname="cancellationToken">`</param>`
+
+    ///`<returns></returns>`
+
+    Task<List`<T>`> ExecuteSpReturnListTypeAsync `<T>`(stringstoredProcName, Dictionary<string, SqlParameter> procParameters, CancellationTokencancellationToken=default) whereT : class, new();
