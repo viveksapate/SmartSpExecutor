@@ -13,4 +13,13 @@ public class DataAccess(ISpExecutor spExecutor)
         };
         return await _spExecutor.ExecuteSpReturnTypeAsync<User>("YourDB.Table.SpName", parameters);
     }
+    
+    public async Task<List<User>> GetUsersAsync(string role)
+    {
+        var parameters = new Dictionary<string, SqlParameter>
+        {
+            { "@role", new SqlParameter("@role", SqlDbType.NVarChar) { Value = role} },
+        };
+        return await _spExecutor.ExecuteSpReturnListTypeAsync<User>("YourDB.Table.SpName", parameters);
+    }
 }

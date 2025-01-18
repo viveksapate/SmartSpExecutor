@@ -8,9 +8,7 @@ Step 2: Register services
 
 Step 3 : Here you go
 
-
-![1737091418264](image/README/1737091418264.png)
-
+![1737210227595](image/README/1737210227595.png)
 
 Available Methods :
 
@@ -88,7 +86,7 @@ Available Methods :
 
     ///`<returns></returns>`
 
-    Task`<T>` ExecuteSpReturnTypeAsync`<T>`(stringstoredProcName, CancellationTokencancellationToken=default) whereT : class, new();
+    Task`<T>` ExecuteSpReturnTypeAsync `<T>`(stringstoredProcName, CancellationTokencancellationToken=default) whereT : class, new();
 
     ///`<summary>`
 
