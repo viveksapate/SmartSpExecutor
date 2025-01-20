@@ -4,14 +4,13 @@ Step 1: Include the package
 
 Step 2: Register services
 
-![1737090746156](image/README/1737090746156.png)
+![1737357662691](image/README/1737357662691.png)
 
 Step 3 : Here you go
 
-![1737210227595](image/README/1737210227595.png)
+![1737357628640](image/README/1737357628640.png)
 
 Available Methods :
-
 
 ///`<summary>`
 

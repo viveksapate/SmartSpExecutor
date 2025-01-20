@@ -11,7 +11,7 @@ public class DataAccess(ISpExecutor spExecutor)
         {
             { "@emailAddress", new SqlParameter("@emailAddress", SqlDbType.NVarChar) { Value = emailAddress} },
         };
-        return await _spExecutor.ExecuteSpReturnTypeAsync<User>("YourDB.Table.SpName", parameters);
+        return await _spExecutor.ExecuteSpReturnTypeAsync<User>("YourDB.dbo.SpName", parameters);
     }
     
     public async Task<List<User>> GetUsersAsync(string role)
@@ -20,6 +20,6 @@ public class DataAccess(ISpExecutor spExecutor)
         {
             { "@role", new SqlParameter("@role", SqlDbType.NVarChar) { Value = role} },
         };
-        return await _spExecutor.ExecuteSpReturnListTypeAsync<User>("YourDB.Table.SpName", parameters);
+        return await _spExecutor.ExecuteSpReturnListTypeAsync<User>("YourDB.dbo.SpName", parameters);
     }
 }
