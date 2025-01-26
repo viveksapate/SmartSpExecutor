@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Data;
 using Microsoft.Data.SqlClient;
 using SmartSpExecutor;
@@ -13,13 +14,13 @@ public class DataAccess(ISpExecutor spExecutor)
         };
         return await _spExecutor.ExecuteSpReturnTypeAsync<User>("YourDB.dbo.SpName", parameters);
     }
-    
-    public async Task<List<User>> GetUsersAsync(string role)
+
+    public async Task<IEnumerable> GetUsersAsync(string role)
     {
         var parameters = new Dictionary<string, SqlParameter>
         {
             { "@role", new SqlParameter("@role", SqlDbType.NVarChar) { Value = role} },
         };
-        return await _spExecutor.ExecuteSpReturnListTypeAsync<User>("YourDB.dbo.SpName", parameters);
+        return await _spExecutor.ExecuteSpReturnTypeColAsync<User>("YourDB.dbo.SpName", parameters);
     }
 }
