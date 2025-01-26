@@ -12,6 +12,7 @@ Step 3 : Here you go
 
 Available Methods :
 
+```
     /// <summary>
     /// Method executes the stored procedure and returns a rows modified count
     /// </summary>
@@ -66,23 +67,23 @@ Available Methods :
     Task<T> ExecuteSpReturnTypeAsync<T>(string storedProcName, Dictionary<string, SqlParameter> procParameters, CancellationToken cancellationToken = default) where T : class, new();
 
     /// <summary>
-    /// Method executes the stored procedure and returns a same list type
+    /// Method executes the stored procedure and returns a same  type collection 
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="storedProcName"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    Task<List<T>> ExecuteSpReturnListTypeAsync<T>(string storedProcName, CancellationToken cancellationToken = default) where T : class, new();
+    Task<IEnumerable> ExecuteSpReturnTypeColAsync<T>(string storedProcName, CancellationToken cancellationToken = default) where T : class, new();
 
     /// <summary>
-    /// Method executes the stored procedure and returns a same list type
+    /// Method executes the stored procedure and returns a same type collection
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="storedProcName"></param>
     /// <param name="procParameters"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    Task<List<T>> ExecuteSpReturnListTypeAsync<T>(string storedProcName, Dictionary<string, SqlParameter> procParameters, CancellationToken cancellationToken = default) where T : class, new();
+    Task<IEnumerable> ExecuteSpReturnTypeColAsync<T>(string storedProcName, Dictionary<string, SqlParameter> procParameters, CancellationToken cancellationToken = default) where T : class, new();
 
     /// <summary>
     /// Method executes the stored procedure and returns a dataTable
@@ -100,3 +101,4 @@ Available Methods :
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
     Task<DataTable> ExecuteSpReturnDataTableAsync(string storedProcName, Dictionary<string, SqlParameter> procParameters, CancellationToken cancellationToken = default);
+```
